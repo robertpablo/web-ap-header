@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { NgBootstrapModule } from './bootstrap/bootstrap.module';
 
 @NgModule({
   declarations: [AppComponent],

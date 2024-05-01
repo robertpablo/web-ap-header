@@ -17,7 +17,6 @@ import { NgBootstrapModule } from './bootstrap/bootstrap.module';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgBootstrapModule,
   ],
 
   bootstrap: [AppComponent],

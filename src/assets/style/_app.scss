@@ -1,5 +1,3 @@
-// styles in src/style directory are applied to the whole page
-
 ropabajo-header .navbar {
   background: linear-gradient(135deg, #0143a3, #0273d4);
 }
@@ -447,3 +445,188 @@ ngb-carousel {
 //   @extend .flex-xl-nowrap; // Extiende los estilos de la clase flex-xl-nowrap
 // }
 
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+.title-group {
+  @extend .fw-bold;
+  @extend .fs-6;
+}
+
+.title-group-uppercase {
+  @extend .title-group;
+  text-transform: uppercase;
+  color: var(--bs-body-color);
+}
+
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  height: $rpbj-btn-regular;
+  border-radius: $border-radius-sm;
+
+  .feather {
+    font-size: 16px;
+  }
+
+  &.btn-sm {
+    font-size: 12px;
+    height: $rpbj-btn-small;
+
+    .feather {
+      font-size: 14px;
+    }
+  }
+
+  &.btn-lg {
+    font-size: 16px;
+    height: $rpbj-btn-large;
+
+    .feather {
+      font-size: 18px;
+    }
+  }
+
+  &.btn-primary {
+    color: white !important;
+  }
+
+  &.btn-secondary {
+    color: $rpbj-grey-30;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $rpbj-grey-20 !important;
+      border-color: $rpbj-grey-20 !important;
+    }
+
+    &:active {
+      color: $rpbj-grey-30 !important;
+    }
+
+    &.disabled,
+    &:disabled {
+      pointer-events: none;
+    }
+  }
+
+  &.btn-outline-primary {
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $rpbj-white !important;
+      background-color: $rpbj-red !important;
+    }
+  }
+
+  &.btn-outline-secondary {
+    color: $rpbj-grey-40;
+    border-color: $rpbj-grey-20;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $rpbj-grey-10 !important;
+      // border-color: $rpbj-grey-10 !important;
+    }
+
+    &:active {
+      color: $rpbj-grey-30 !important;
+    }
+
+    &.disabled,
+    &:disabled {
+      color: $rpbj-grey-20;
+      pointer-events: none;
+    }
+  }
+
+  &.btn-outline-light {
+    color: $rpbj-grey-40;
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover {
+      color: $rpbj-red;
+    }
+
+    &:focus,
+    &:active {
+      color: $rpbj-red !important;
+      background-color: transparent !important;
+      box-shadow: none !important;
+      border-color: transparent !important;
+    }
+
+    &.btn-icon {
+      .feather {
+        font-size: 18px;
+      }
+
+      &.btn-sm {
+        .feather {
+          font-size: 16px;
+        }
+      }
+
+      &.btn-lg {
+        .feather {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &.disabled,
+    &:disabled {
+      pointer-events: none;
+      color: $rpbj-grey-20;
+      background-color: transparent;
+    }
+  }
+
+  &-icon {
+    width: $rpbj-btn-regular;
+
+    &.btn-sm {
+      width: $rpbj-btn-small;
+    }
+
+    &.btn-lg {
+      width: $rpbj-btn-large;
+    }
+  }
+
+  &-menu {
+    cursor: pointer;
+    background-color: $rpbj-red-dark;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include transition (all 0.3s cubic-bezier(0.0, 0.0, 0.2, 1));
+  }
+
+  &.disabled,
+  &:disabled {
+    opacity: .5;
+  }
+}
+
+.btn-cancel {
+  @extend .btn;
+  @extend .btn-secondary;
+  @extend .w-auto;
+
+  color: #141415 !important;
+  appearance: none;
+  border: 1px solid #d2d3d5 !important;
+  height: 32px !important;
+}

@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  deployUrl: 'http://localhost:9098',
+  deployUrl: 'http://localhost:9099',
   entornoUrl: 'https://apps2desa.mineco.gob.pe',
   urlLandingNsrtm: 'http://localhost:9099',
 };

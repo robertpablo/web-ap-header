@@ -27,3 +27,6 @@
 *.swp
 *.viminfo
 /tmp
+
+# extras
+.env

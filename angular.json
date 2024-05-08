@@ -77,6 +77,14 @@
               ],
               "styles": [
                 "src/styles.scss"
+              ],
+              "assets": [
+                "src/assets",
+                {
+                  "glob": "app-config.json",
+                  "input": "src/configs/dev",
+                  "output": "./assets/config"
+                }
               ]
             }
           },

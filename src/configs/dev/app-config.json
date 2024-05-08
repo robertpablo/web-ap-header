@@ -1,0 +1,5 @@
+{
+  "gateway": {
+    "bulkload": "http://localhost:5001"
+  }
+}

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Select } from '@ngxs/store';
+import { AppState } from '@ropabajo/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'ropabajo-header',
@@ -8,4 +11,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   navbarCollapsed = true;
   downloadCount = 1;
+  @Select(AppState.isLoading) isLoading$!: Observable<boolean>;
 }

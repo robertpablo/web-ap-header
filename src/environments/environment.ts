@@ -4,6 +4,6 @@ export const environment = {
   entornoUrl: 'https://apps2desa.mineco.gob.pe',
   urlLandingNsrtm: 'http://localhost:9099',
   urls: {
-    appConfig: '/assets/config/app-config.json',
+    appConfig: 'http://localhost:9099/assets/config/app-config.json',
   },
 };

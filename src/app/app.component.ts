@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigurationService } from '@ropabajo/core';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'ropabajo-header',
@@ -11,12 +10,9 @@ export class AppComponent implements OnInit {
   navbarCollapsed = true;
   downloadCount = 1;
 
-  private url = this.configuration.global();
-
-  constructor(private configuration: ConfigurationService) {}
+  constructor(private configurationService: ConfigurationService) {}
 
   ngOnInit(): void {
-    console.log(environment.urls.appConfig);
-    console.log(this.url);
+    console.log(this.configurationService.global(), 'global header');
   }
 }

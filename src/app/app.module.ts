@@ -27,13 +27,6 @@ const coreConfig: CoreConfig = {
   appConfigUrl: environment.urls.appConfig, //'http://localhost:9098/assets/config/app-config.json',
 };
 
-export function initializeApp(store: Store) {
-  return () =>
-    store
-      .dispatch(new AppStoreActions.GlobalConfig.GetGlobalConfig())
-      .toPromise();
-}
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -62,12 +55,6 @@ export function initializeApp(store: Store) {
     { provide: CORE_CONFIG, useValue: coreConfig },
     DecimalPipe,
     ConfigService,
-    {
-      provide: APP_INITIALIZER,
-      useFactory: initializeApp,
-      deps: [Store],
-      multi: true,
-    },
   ],
 })
 export class AppModule {}

@@ -12,9 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import {
   AppGlobalConfigState,
-  AppStoreActions,
   CORE_CONFIG,
-  ConfigService,
   CoreConfig,
   CoreModule,
 } from '@ropabajo/core';
@@ -54,7 +52,6 @@ const coreConfig: CoreConfig = {
     { provide: LOCALE_ID, useValue: 'es-PE' },
     { provide: CORE_CONFIG, useValue: coreConfig },
     DecimalPipe,
-    ConfigService,
   ],
 })
 export class AppModule {}

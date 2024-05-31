@@ -10,13 +10,8 @@ import { CommonModule, DecimalPipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import {
-  AppGlobalConfigState,
-  CORE_CONFIG,
-  CoreConfig,
-  CoreModule,
-} from '@ropabajo/core';
-import { NgxsModule, Store } from '@ngxs/store';
+import { AppGlobalConfigState, CORE_CONFIG, CoreConfig, CoreModule } from '@ropabajo/core';
+import { NgxsModule } from '@ngxs/store';
 import { environment } from 'src/environments/environment';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
